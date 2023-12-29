@@ -18,14 +18,12 @@ if (last === 'start') {
     stop.style.display = 'none'
 }
 
-let intervalID
 const executarCodigo = () => {
     function autoClick(botao) { if (botao) { botao.click() } }
-    intervalID = setInterval(() => { var botao = document.querySelector('[data-test-id="views_views-list_header-refresh"]'); autoClick(botao) }, 3000)
+    setInterval(() => { var botao = document.querySelector('[data-test-id="views_views-list_header-refresh"]'); autoClick(botao) }, 3000)
 }
 
 const pararCodigo = () => {
-    clearInterval(intervalID)
     window.location.reload()
 }
 
